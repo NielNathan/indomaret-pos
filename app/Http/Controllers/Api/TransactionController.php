@@ -26,7 +26,6 @@ class TransactionController extends Controller
     {
         $data = $request->validate([
             'items' => ['required', 'array', 'min:1'],
-            'items.*.product_id' => ['required', 'exists:products,id'],
             'items.*.qty' => ['required', 'integer', 'min:1'],
             'paid' => ['required', 'integer', 'min:0'],
         ]);

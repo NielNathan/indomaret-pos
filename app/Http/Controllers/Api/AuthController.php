@@ -23,7 +23,6 @@ class AuthController extends Controller
         }
 
         return response()->json([
-            'token' => $user->createToken('pos-api')->plainTextToken,
             'user' => $user,
         ]);
     }

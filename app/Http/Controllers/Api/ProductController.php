@@ -57,7 +57,6 @@ class ProductController extends Controller
             'sku' => ['required', 'string', 'max:30', Rule::unique('products', 'sku')->ignore($product)],
             'name' => ['required', 'string', 'max:120'],
             'price' => ['required', 'integer', 'min:0'],
-            'stock' => ['required', 'integer', 'min:0'],
         ]);
     }
 }
